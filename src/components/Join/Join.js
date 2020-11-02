@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import './Join.css';
+import '../Popup/Popup'
+import Popup from '../Popup/Popup';
 
 export default function SignIn() {
   const [name, setName] = useState('');
@@ -10,6 +12,7 @@ export default function SignIn() {
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
+        <Popup />
         <h1 className="heading">Join</h1>
         <div>
           <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
